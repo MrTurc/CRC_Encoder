@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     var frame = int_fast32_t(0)
     var aktivLable = true
+    var test = [Bool]()
+    
     
     @IBAction func switchFrameGenerator(sender: AnyObject)
     {
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
             generatorInput.textColor = UIColor.blueColor()
             switchButtonLable.setTitle("Change to Frame", forState: .Normal)
         }
+    }
+    
+    func shiftl(data:[Bool]){
+        
     }
     
     @IBAction func oneButton(sender: AnyObject)
