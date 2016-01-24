@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D4C7DB41C3F0392002BB18C"
+               BlueprintIdentifier = "7D9E03F41C556CCA0049BD36"
                BuildableName = "CRC.app"
                BlueprintName = "CRC"
                ReferencedContainer = "container:CRC.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D4C7DC81C3F0392002BB18C"
+               BlueprintIdentifier = "7D9E04081C556CCA0049BD36"
                BuildableName = "CRCTests.xctest"
                BlueprintName = "CRCTests"
                ReferencedContainer = "container:CRC.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D4C7DD31C3F0392002BB18C"
+               BlueprintIdentifier = "7D9E04131C556CCA0049BD36"
                BuildableName = "CRCUITests.xctest"
                BlueprintName = "CRCUITests"
                ReferencedContainer = "container:CRC.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D4C7DB41C3F0392002BB18C"
+            BlueprintIdentifier = "7D9E03F41C556CCA0049BD36"
             BuildableName = "CRC.app"
             BlueprintName = "CRC"
             ReferencedContainer = "container:CRC.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D4C7DB41C3F0392002BB18C"
+            BlueprintIdentifier = "7D9E03F41C556CCA0049BD36"
             BuildableName = "CRC.app"
             BlueprintName = "CRC"
             ReferencedContainer = "container:CRC.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D4C7DB41C3F0392002BB18C"
+            BlueprintIdentifier = "7D9E03F41C556CCA0049BD36"
             BuildableName = "CRC.app"
             BlueprintName = "CRC"
             ReferencedContainer = "container:CRC.xcodeproj">

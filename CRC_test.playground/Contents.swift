@@ -8,7 +8,7 @@ var code = Array<Array<Bool>>()
 
 var massage = [Bool](arrayLiteral: false,true,true,false)
 
-var generator = [Bool](arrayLiteral: false,true,false,false,true,false)
+var generator = [Bool](arrayLiteral: false,false,true,false,false)
 
 var n = 8
 var m = 4
@@ -76,12 +76,11 @@ func oneLineCRC(var massege:[Bool], genrator:[Bool], k:Int)->[Bool]
     return tmp
 }
 
-oneLineCRC(massage, genrator: generator, k: k)
+//oneLineCRC(massage, genrator: generator, k: k)
 
-func fullCRC(gerator:[Bool], n:Int, m:Int, k:Int)
+func fullCRC(inout outCode:[[Bool]],gerator:[Bool], n:Int, m:Int, k:Int)
 {
     var massegeIntern = [Bool]()
-    var code = [[Bool]]()
     
     for (var i = 0 ; i < Int(pow(2.0, Double(m)));i++)
     {
@@ -98,11 +97,11 @@ func fullCRC(gerator:[Bool], n:Int, m:Int, k:Int)
             massegeIntern.append(true)
         }
         massegeIntern
-        code.append(oneLineCRC(massegeIntern, genrator: generator, k: k))
+        outCode.append(oneLineCRC(massegeIntern, genrator: generator, k: k))
         massegeIntern.removeAll()
     }
-    code
+    outCode
 
 }
 
-fullCRC(generator, n: 10, m: 5, k: 5)
+fullCRC(&code,gerator: generator, n: n, m: m, k: k)
