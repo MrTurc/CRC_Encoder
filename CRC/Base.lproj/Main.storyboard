@@ -18,8 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P30-gz-fYy">
+                                <rect key="frame" x="246" y="223" width="94" height="29"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="plusMinButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="xxK-NT-nv5"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Massege" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjK-3s-8oN">
+                                <rect key="frame" x="105" y="223" width="69" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWF-6k-mat">
+                                <rect key="frame" x="254" y="303" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="zeroButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6i0-Z5-VEC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ev-aC-WKB">
+                                <rect key="frame" x="302" y="303" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="oneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xer-l1-HDr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSg-HS-NRD">
+                                <rect key="frame" x="101" y="303" width="77" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-KT-EhT">
+                                <rect key="frame" x="348" y="303" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="DEL"/>
+                                <connections>
+                                    <action selector="delButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0h-j0-pX6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xt-87-hXl">
-                                <rect key="frame" x="277" y="80" width="46" height="30"/>
+                                <rect key="frame" x="201" y="95" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -31,10 +76,6 @@
                                 <rect key="frame" x="115" y="163" width="371" height="31"/>
                                 <animations/>
                             </slider>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P30-gz-fYy">
-                                <rect key="frame" x="329" y="219" width="94" height="29"/>
-                                <animations/>
-                            </stepper>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -45,6 +86,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="auy-pU-LDE"/>
+                    <connections>
+                        <outlet property="generatorLabel" destination="uSg-HS-NRD" id="K1y-bI-1ci"/>
+                        <outlet property="massegeLabel" destination="LjK-3s-8oN" id="0pt-bb-06T"/>
+                        <outlet property="plusMinStepper" destination="P30-gz-fYy" id="EbQ-b2-YKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

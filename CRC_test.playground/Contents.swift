@@ -14,21 +14,17 @@ var n = 8
 var m = 4
 var k = 4
 
-
+generator.dropFirst()
 
 
 func shiftLeft(inout data:[Bool]){
-    for(var i = data.count-1; i > 0; i--){
-        data[i] = data[i-1]
-    }
-    data[0]=true
+    data.removeAtIndex(data.count-1)
+    data.insert(true, atIndex: 0)
 }
 
 func shiftRight(inout data:[Bool]){
-    for(var i = 0; i < (data.count-1); i++){
-        data[i] = data[i+1]
-    }
-    data[data.count-1] = true
+    data.insert(true, atIndex: data.count-1)
+    data.removeAtIndex(0)
 }
 
 func xor(x1:Bool,x2:Bool)->Bool{
