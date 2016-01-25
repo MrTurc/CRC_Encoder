@@ -107,7 +107,10 @@ class FirstPage: UIViewController {
         var addedLines = 0;
         
         
-        while(massege.count < generator.count){
+        while(massege.count < k){
+            massege.insert(true, atIndex: massege.count)
+        }
+        while(massege.count < genrator.count){
             massege.insert(true, atIndex: massege.count)
             addedLines++
         }

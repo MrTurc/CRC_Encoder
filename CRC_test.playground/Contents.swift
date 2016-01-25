@@ -6,16 +6,13 @@ var str = "Hello, playground"
 
 var code = Array<Array<Bool>>()
 
-var massage = [Bool](arrayLiteral: false,true,true,false)
+var massage = [Bool](arrayLiteral: false,true,true,true)
 
 var generator = [Bool](arrayLiteral: false,false,true,false,false)
 
 var n = 8
 var m = 4
 var k = 4
-
-generator.dropFirst()
-
 
 func shiftLeft(inout data:[Bool]){
     data.removeAtIndex(data.count-1)
@@ -33,6 +30,7 @@ func xor(x1:Bool,x2:Bool)->Bool{
     }
     return false
 }
+massage.count
 
 func oneLineCRC(var massege:[Bool], genrator:[Bool], k:Int)->[Bool]
 {
@@ -40,6 +38,10 @@ func oneLineCRC(var massege:[Bool], genrator:[Bool], k:Int)->[Bool]
     var addedLines = 0;
 
     
+    while(massege.count < k){
+        massege.insert(true, atIndex: massege.count)
+        //addedLines++
+    }
     while(massege.count < generator.count){
         massege.insert(true, atIndex: massege.count)
         addedLines++
@@ -50,12 +52,11 @@ func oneLineCRC(var massege:[Bool], genrator:[Bool], k:Int)->[Bool]
     {
         if(massege[massege.count-1] == false)
         {
-            for(var n = 0; n < genrator.count;n++)
+            for(var n = 0; n < generator.count;n++)
             {
-                massege[(massege.count - genrator.count + n)] = xor(massege[(massege.count - genrator.count + n)], x2: genrator[n])
+                massege[(massege.count - generator.count + n)] = xor(massege[(massege.count - generator.count + n)], x2: genrator[n])
             }
         }
-        massege
         shiftLeft(&massege)
         i--
     }
@@ -72,7 +73,7 @@ func oneLineCRC(var massege:[Bool], genrator:[Bool], k:Int)->[Bool]
     return tmp
 }
 
-//oneLineCRC(massage, genrator: generator, k: k)
+oneLineCRC(massage, genrator: generator, k: k)
 
 func fullCRC(inout outCode:[[Bool]],gerator:[Bool], n:Int, m:Int, k:Int)
 {
@@ -100,4 +101,4 @@ func fullCRC(inout outCode:[[Bool]],gerator:[Bool], n:Int, m:Int, k:Int)
 
 }
 
-fullCRC(&code,gerator: generator, n: n, m: m, k: k)
+//fullCRC(&code,gerator: generator, n: n, m: m, k: k)
