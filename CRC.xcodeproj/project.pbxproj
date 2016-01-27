@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D9B741B1C58C5B200457A97 /* FirstPageOneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B741A1C58C5B200457A97 /* FirstPageOneLine.swift */; };
+		7D9B741D1C58C5E200457A97 /* SecondPageOneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B741C1C58C5E200457A97 /* SecondPageOneLine.swift */; };
+		7D9B741F1C58C60D00457A97 /* SelecedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9B741E1C58C60D00457A97 /* SelecedPage.swift */; };
 		7D9E03F91C556CCA0049BD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E03F81C556CCA0049BD36 /* AppDelegate.swift */; };
 		7D9E03FB1C556CCA0049BD36 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9E03FA1C556CCA0049BD36 /* FirstPage.swift */; };
 		7D9E03FE1C556CCA0049BD36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9E03FC1C556CCA0049BD36 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D9B741A1C58C5B200457A97 /* FirstPageOneLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageOneLine.swift; sourceTree = "<group>"; };
+		7D9B741C1C58C5E200457A97 /* SecondPageOneLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPageOneLine.swift; sourceTree = "<group>"; };
+		7D9B741E1C58C60D00457A97 /* SelecedPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecedPage.swift; sourceTree = "<group>"; };
 		7D9E03F51C556CCA0049BD36 /* CRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E03F81C556CCA0049BD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9E03FA1C556CCA0049BD36 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 				7D9E03F81C556CCA0049BD36 /* AppDelegate.swift */,
 				7D9E03FA1C556CCA0049BD36 /* FirstPage.swift */,
 				7D9E03FC1C556CCA0049BD36 /* Main.storyboard */,
+				7D9B741A1C58C5B200457A97 /* FirstPageOneLine.swift */,
+				7D9B741C1C58C5E200457A97 /* SecondPageOneLine.swift */,
+				7D9B741E1C58C60D00457A97 /* SelecedPage.swift */,
 				7D9E04281C556ED80049BD36 /* ThirdPage.swift */,
 				7D9E04261C556EAC0049BD36 /* SecondPage.swift */,
 				7D9E03FF1C556CCA0049BD36 /* Assets.xcassets */,
@@ -263,9 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9E03FB1C556CCA0049BD36 /* FirstPage.swift in Sources */,
+				7D9B741D1C58C5E200457A97 /* SecondPageOneLine.swift in Sources */,
 				7D9E03F91C556CCA0049BD36 /* AppDelegate.swift in Sources */,
 				7D9E04291C556ED80049BD36 /* ThirdPage.swift in Sources */,
 				7D9E04271C556EAC0049BD36 /* SecondPage.swift in Sources */,
+				7D9B741B1C58C5B200457A97 /* FirstPageOneLine.swift in Sources */,
+				7D9B741F1C58C60D00457A97 /* SelecedPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

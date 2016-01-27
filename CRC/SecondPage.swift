@@ -22,9 +22,11 @@ class SecondPage: UIViewController {
     }
     
     @IBOutlet weak var CRCLable: UILabel!
+    @IBOutlet weak var CRCButton: UIButton!
     
     @IBAction func printCRCButton(sender: AnyObject) {
         printCRC()
+        CRCButton.enabled = false
     }
     
     func printCRC(){
@@ -43,6 +45,7 @@ class SecondPage: UIViewController {
             }
             CRCLable.text = CRCLable.text! + "\n"
         }
+        
     }
 
 }
