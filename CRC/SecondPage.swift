@@ -32,7 +32,8 @@ class SecondPage: UIViewController {
     func printCRC(){
         for(var e = 0; e < Int(pow(2.0, Double(m))); e++){
             CRCLable.text = CRCLable.text! + "\(e):\t"
-            for(var i = k-1; i >= 0; i--)
+            //for(var i = k-1; i >= 0; i--)
+            for(var i = code[e].count-1; i >= 0; i--)
             {
                 if(code[e][i] == false)
                 {
