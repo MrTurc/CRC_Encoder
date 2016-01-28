@@ -8,12 +8,12 @@ var code = Array<Array<Bool>>()
 
 var massage = [Bool]()
 
-var generator = [Bool](arrayLiteral: false,false,true,false,false)
+var generator = [Bool](arrayLiteral: false,false)
 
 
-var n = 8
-var m = 4
-var k = 4
+var n = 4
+var m = 3
+var k = 1
 
 func shiftLeft(inout data:[Bool]){
     data.removeAtIndex(data.count-1)
@@ -110,10 +110,6 @@ struct CRCzurVereinfachung {
     var dashes = [Int]()
 }
 
-func minimizeOnePartOfCodewort(indata:[[Bool]],inout outdata:[[Bool]],x:Int)
-{
-    
-}
 
 func copyCRCforMinimization(var indata:[[Bool]], inout outdata:CRCzurVereinfachung,x:Int)
 {
@@ -204,7 +200,7 @@ func copyCRCforMinimization(var indata:[[Bool]], inout outdata:CRCzurVereinfachu
 func quin(inout inputCRC:CRCzurVereinfachung){
     var tmpCRC = CRCzurVereinfachung()
     var moreThenOne = 0
-    var test = 0
+    
     for(var i = 0; i < inputCRC.data.count;i++){
         for(var e = 0; e < inputCRC.data.count;e++){
             if(inputCRC.ones[i]+1 == inputCRC.ones[e] && inputCRC.dashes[i] == inputCRC.dashes[e]){
@@ -252,6 +248,27 @@ func quin(inout inputCRC:CRCzurVereinfachung){
     inputCRC = tmpCRC
 }
 
+func getRidOfMultiTherms(inout inputCRC:CRCzurVereinfachung)
+{
+    var countSame = 0
+    var i = 0
+    while(i < inputCRC.data.count-1)
+    {
+        for(var e = 0; e < inputCRC.data[i].count; e++){
+            if(inputCRC.data[i][e] == inputCRC.data[i+1][e]){
+                countSame++
+            }
+        }
+        if(countSame == inputCRC.data[i].count){
+            inputCRC.data.removeAtIndex(i+1)
+            i = 0
+        }else{
+            i++
+        }
+        countSame = 0
+    }
+}
+
 
 /******************
 **      Test     **
@@ -264,6 +281,7 @@ fullCRC(&code,gerator: generator, n: n, m: m, k: k)
 
 
 var minimized = Array<Array<Bool>>()
+var output = Array<CRCzurVereinfachung>()
 
 for(var xStellen = 0; xStellen < k; xStellen++){
     
@@ -284,21 +302,25 @@ for(var xStellen = 0; xStellen < k; xStellen++){
             notFixed = false
         }
     }
+    CRCRawData.data.count
     
-    for(var i = 0;){
-        
-    }
+    getRidOfMultiTherms(&CRCRawData)
     
+    output.append(CRCRawData)
 }
 
-
+output[0].data
+//output[1].data
+//output[2].data
+//output[3].data
+//
+//
 //    var CRCRawData = CRCzurVereinfachung()
 //    var notFixed = true
 //    var fixCount = 0
 //
 //    copyCRCforMinimization(code, outdata: &CRCRawData, x: 2)
-
-
+//
 //CRCRawData.data[0][0]
 //CRCRawData.data[0][1]
 //CRCRawData.data[0][2]
@@ -338,22 +360,165 @@ for(var xStellen = 0; xStellen < k; xStellen++){
 //CRCRawData.data[7][1]
 //CRCRawData.data[7][2]
 //CRCRawData.data[7][3]
-
-
-
-
-//    while(notFixed){
-//        quin(&CRCRawData)
-//        for(var i = 0; i < CRCRawData.fixed.count;i++){
-//            if(CRCRawData.fixed[i] == true){
-//                fixCount++
-//            }
-//        }
-//        if(fixCount == CRCRawData.fixed.count ){
-//            notFixed = false
-//        }
-//    }
 //
+//
+//
+//
+//
+////    while(notFixed){
+////        quin(&CRCRawData)
+////        for(var i = 0; i < CRCRawData.fixed.count;i++){
+////            if(CRCRawData.fixed[i] == true){
+////                fixCount++
+////            }
+////        }
+////        if(fixCount == CRCRawData.fixed.count ){
+////            notFixed = false
+////        }
+////    }
+////
+////
+////
+////
+//quin(&CRCRawData)
+//
+//CRCRawData.compared
+//
+//CRCRawData.dashes
+//
+//CRCRawData.fixed
+//
+//CRCRawData.ones
+//
+//CRCRawData.data[0][0]
+//CRCRawData.data[0][1]
+//CRCRawData.data[0][2]
+//CRCRawData.data[0][3]
+//
+//CRCRawData.data[1][0]
+//CRCRawData.data[1][1]
+//CRCRawData.data[1][2]
+//CRCRawData.data[1][3]
+//
+//CRCRawData.data[2][0]
+//CRCRawData.data[2][1]
+//CRCRawData.data[2][2]
+//CRCRawData.data[2][3]
+//
+//CRCRawData.data[3][0]
+//CRCRawData.data[3][1]
+//CRCRawData.data[3][2]
+//CRCRawData.data[3][3]
+//
+//CRCRawData.data[4][0]
+//CRCRawData.data[4][1]
+//CRCRawData.data[4][2]
+//CRCRawData.data[4][3]
+//
+//CRCRawData.data[5][0]
+//CRCRawData.data[5][1]
+//CRCRawData.data[5][2]
+//CRCRawData.data[5][3]
+//
+//CRCRawData.data[6][0]
+//CRCRawData.data[6][1]
+//CRCRawData.data[6][2]
+//CRCRawData.data[6][3]
+//
+//CRCRawData.data[7][0]
+//CRCRawData.data[7][1]
+//CRCRawData.data[7][2]
+//CRCRawData.data[7][3]
+//
+//CRCRawData.data[8][0]
+//CRCRawData.data[8][1]
+//CRCRawData.data[8][2]
+//CRCRawData.data[8][3]
+//
+//CRCRawData.data[9][0]
+//CRCRawData.data[9][1]
+//CRCRawData.data[9][2]
+//CRCRawData.data[9][3]
+//
+//CRCRawData.data[10][0]
+//CRCRawData.data[10][1]
+//CRCRawData.data[10][2]
+//CRCRawData.data[10][3]
+//
+//CRCRawData.data[11][0]
+//CRCRawData.data[11][1]
+//CRCRawData.data[11][2]
+//CRCRawData.data[11][3]
+//
+//quin(&CRCRawData)
+//
+//CRCRawData.compared
+//
+//CRCRawData.dashes
+//
+//CRCRawData.fixed
+//
+//CRCRawData.ones
+//
+//CRCRawData.data[0][0]
+//CRCRawData.data[0][1]
+//CRCRawData.data[0][2]
+//CRCRawData.data[0][3]
+//
+//CRCRawData.data[1][0]
+//CRCRawData.data[1][1]
+//CRCRawData.data[1][2]
+//CRCRawData.data[1][3]
+//
+//CRCRawData.data[2][0]
+//CRCRawData.data[2][1]
+//CRCRawData.data[2][2]
+//CRCRawData.data[2][3]
+//
+//CRCRawData.data[3][0]
+//CRCRawData.data[3][1]
+//CRCRawData.data[3][2]
+//CRCRawData.data[3][3]
+//
+//CRCRawData.data[4][0]
+//CRCRawData.data[4][1]
+//CRCRawData.data[4][2]
+//CRCRawData.data[4][3]
+//
+//CRCRawData.data[5][0]
+//CRCRawData.data[5][1]
+//CRCRawData.data[5][2]
+//CRCRawData.data[5][3]
+//
+//CRCRawData.data[6][0]
+//CRCRawData.data[6][1]
+//CRCRawData.data[6][2]
+//CRCRawData.data[6][3]
+//
+//CRCRawData.data[7][0]
+//CRCRawData.data[7][1]
+//CRCRawData.data[7][2]
+//CRCRawData.data[7][3]
+//
+//CRCRawData.data[8][0]
+//CRCRawData.data[8][1]
+//CRCRawData.data[8][2]
+//CRCRawData.data[8][3]
+//
+//CRCRawData.data[9][0]
+//CRCRawData.data[9][1]
+//CRCRawData.data[9][2]
+//CRCRawData.data[9][3]
+//
+//CRCRawData.data[10][0]
+//CRCRawData.data[10][1]
+//CRCRawData.data[10][2]
+//CRCRawData.data[10][3]
+//
+//CRCRawData.data[11][0]
+//CRCRawData.data[11][1]
+//CRCRawData.data[11][2]
+//CRCRawData.data[11][3]
 //
 //
 //
@@ -387,6 +552,28 @@ for(var xStellen = 0; xStellen < k; xStellen++){
 //CRCRawData.data[3][2]
 //CRCRawData.data[3][3]
 //
+//CRCRawData.data[4][0]
+//CRCRawData.data[4][1]
+//CRCRawData.data[4][2]
+//CRCRawData.data[4][3]
+//
+//CRCRawData.data[5][0]
+//CRCRawData.data[5][1]
+//CRCRawData.data[5][2]
+//CRCRawData.data[5][3]
+//
+//CRCRawData.data[6][0]
+//CRCRawData.data[6][1]
+//CRCRawData.data[6][2]
+//CRCRawData.data[6][3]
+//
+//CRCRawData.data[7][0]
+//CRCRawData.data[7][1]
+//CRCRawData.data[7][2]
+//CRCRawData.data[7][3]
+//
+//
+//
 //quin(&CRCRawData)
 //
 //CRCRawData.compared
@@ -416,3 +603,25 @@ for(var xStellen = 0; xStellen < k; xStellen++){
 //CRCRawData.data[3][1]
 //CRCRawData.data[3][2]
 //CRCRawData.data[3][3]
+//
+//CRCRawData.data[4][0]
+//CRCRawData.data[4][1]
+//CRCRawData.data[4][2]
+//CRCRawData.data[4][3]
+//
+//CRCRawData.data[5][0]
+//CRCRawData.data[5][1]
+//CRCRawData.data[5][2]
+//CRCRawData.data[5][3]
+//
+//CRCRawData.data[6][0]
+//CRCRawData.data[6][1]
+//CRCRawData.data[6][2]
+//CRCRawData.data[6][3]
+//
+//CRCRawData.data[7][0]
+//CRCRawData.data[7][1]
+//CRCRawData.data[7][2]
+//CRCRawData.data[7][3]
+//
+//

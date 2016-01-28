@@ -12,7 +12,8 @@ class SecondPageOneLine: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        printMassegeLable.adjustsFontSizeToFitWidth = true
+        printCRC()
         // Do any additional setup after loading the view.
     }
 
@@ -23,20 +24,19 @@ class SecondPageOneLine: UIViewController {
     
     @IBOutlet weak var printMassegeLable: UILabel!
     
-    @IBAction func printMassegeButton(sender: AnyObject) {
-            for(var i = generatedMassage.count-1; i >= 0; i--)
+    func printCRC(){
+        for(var i = generatedMassage.count-1; i >= 0; i--)
+        {
+            if(generatedMassage[i] == false)
             {
-                if(generatedMassage[i] == false)
-                {
-                    printMassegeLable.text = printMassegeLable.text! + "1 "
-                }
-                else if (generatedMassage[i] == true)
-                {
-                    printMassegeLable.text = printMassegeLable.text! + "0 "
-                }
+                printMassegeLable.text = printMassegeLable.text! + "1 "
             }
-            printMassegeLable.text = printMassegeLable.text! + "\n"
+            else if (generatedMassage[i] == true)
+            {
+                printMassegeLable.text = printMassegeLable.text! + "0 "
+            }
         }
-    
+        printMassegeLable.text = printMassegeLable.text! + "\n"
+    }
 
 }
